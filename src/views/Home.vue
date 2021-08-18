@@ -2,6 +2,8 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <el-button type="primary" @click="one">hello</el-button>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -13,6 +15,15 @@ export default {
   name: 'Home',
   components: {
     HelloWorld
+  },
+  methods: {
+    one () {
+      this.$router.push(
+        { path: '/home/123' }
+      )
+    }
   }
 }
 </script>
+
+
